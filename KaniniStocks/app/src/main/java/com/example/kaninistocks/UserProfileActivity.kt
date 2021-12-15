@@ -6,13 +6,19 @@ import android.os.Bundle
 import android.widget.TextView
 
 class UserProfileActivity : AppCompatActivity() {
+    private lateinit var sessionManager: SessionManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_profile)
 
+        sessionManager = SessionManager(this)
+
+        val uEmail = findViewById<TextView>(R.id.uEmail)
         val profile = findViewById<TextView>(R.id.uProfile)
         val myOrder = findViewById<TextView>(R.id.uOrders)
         val otherUser = findViewById<TextView>(R.id.uOtherUsers)
+
+        uEmail.setText(sessionManager.fetchEmail())
 
         profile.setOnClickListener{
             val intent = Intent(this, ProfileScreenActivity::class.java)

@@ -15,12 +15,8 @@
         <activity
             android:name=".LoginHistoryActivity"
             android:exported="false" />
-        <activity
-            android:name=".userData.LoginHistoryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".xLoginHistoryActivity"
-            android:exported="false" />
+
+
         <activity
             android:name=".OtherUserActivity"
             android:exported="false" />
@@ -30,11 +26,7 @@
         <activity
             android:name=".StockBuyingActivity"
             android:exported="false" />
-        <activity
-            android:name=".StockBuyActivity"
-            android:exported="false"
-            android:label="@string/title_activity_stock_buy"
-            android:theme="@style/Theme.KaniniStocks.NoActionBar" />
+
         <activity
             android:name=".MyStockActivity"
             android:exported="false" />
